@@ -103,6 +103,12 @@ keys.addEventListener('click', (event) => {
         return;
     }
 
+    if (target.classList.contains('equal-sign')) {
+        handleOperator(target.value);
+        updateDisplay();
+        return;
+    }
+
     inputDigit(target.value);
     updateDisplay();
 });
